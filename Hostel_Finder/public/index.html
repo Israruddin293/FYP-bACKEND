@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Finder Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./teststyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid Navigation py-1" style="background-color: #1E232C;">
+            <div class="Nav-Handle">
+                <nav class="navbar navbar-expand-xl ">
+                    <div class="d-flex lg:justify-content-center justify-content-between align-items-center flex-nowrap w-100">
+                        <a class="navbar-brand " href="#"><img class="w-100" src="../Images/Group 272.png" alt=""></a>
+                    
+                    <div class="d-flex justify-content-xl-start justify-content-end align-items-center w-100">
+                        <div class="d-flex justify-content-center align-items-center bg-white w-75 w-lg-100 overflow-hidden px-3 py-1" style="border-radius: 10px;">
+                            <div class="d-flex justify-content-center align-items-center w-100">
+                               <i class="fas fa-search feature-icon d-block p-0 mt-2" style="font-size: 20px;"></i>
+                               <form class="flex form-inline  my-lg-0 mx-auto w-100 ">
+                                   <input class="form-control w-100 border-0" type="search" placeholder="Search" aria-label="Search" style="outline: none;">
+                                   <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                               </form>
+                            </div>
+                            <i class="fas fa-filter"></i>
+                            </div>
+                               <button class="navbar-toggler col-1 mt-2 ml-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                   <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color: white;"></i></span>
+                               </button>
+                    </div>
+                    </div>
+                    
+                    
+                <div class="collapse navbar-collapse col-6" id="navbarNav">
+                    <ul class="navbar-nav ml-auto gap-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./signup.php" style="color: #35C2C1;">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                    </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Moto-->
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+          <div class="col-12 main-content">
+            <img src="../Images/main.png" class="img-fluid" alt="">
+            <div class="content">
+              <h1 class="text-center text-md-center ">
+               <b>Discover Your Home <br>Away From Home <br> Hostel Finder!</b>
+              </h1>
+              <div class="text-center">
+                <button class="btn Book" style="font-weight: 600;">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Rated Hostels  -->
+    
+      <div class="container-fluid top-hostel mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Top Rated Hostels</h2>
+            <a href="#" class="view-all" id="viewAllHostels" style="color: #35C2C1;">View All</a>
+        </div>
+    
+        <div class="row d-none d-md-flex">
+            <div class="col-md-4">
+                <div class="hostel">
+                    <img src="../Images/image 9.png" alt="Hostel 1" class="hostel-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Capital Boys Hostel</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                        <p class="card-text"><i class="fas fa-star"></i> 4.2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hostel">
+                    <img src="../Images/image 10.png" alt="Hostel 2" class="hostel-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Hostel 2</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                        <p class="card-text"><i class="fas fa-star"></i> 4.5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hostel">
+                    <img src="../Images/unsplash_iMbXscxYIFE.jpg" alt="Hostel 3" class="hostel-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Hostel 3</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                        <p class="card-text"><i class="fas fa-star"></i> 4.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Carousel for mobile view -->
+        <div id="carouselHostels" class="carousel slide d-md-none" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hostel">
+                        <img src="../Images/image 9.png" alt="Hostel 1" class="hostel-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Capital Boys Hostel</h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                            <p class="card-text"><i class="fas fa-star"></i> 4.2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hostel">
+                        <img src="../Images/image 10.png" alt="Hostel 2" class="hostel-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Hostel 2</h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                            <p class="card-text"><i class="fas fa-star"></i> 4.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hostel">
+                        <img src="../Images/unsplash_iMbXscxYIFE.jpg" alt="Hostel 3" class="hostel-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Hostel 3</h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                            <p class="card-text"><i class="fas fa-star"></i> 4.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselHostels" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselHostels" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- List Of Hostels -->
+
+    <div class="container-fluid top-hostel mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>List Of Hostels</h2>
+            <a href="#" class="view-all" id="viewAllHostels" style="color: #35C2C1;">View All</a>
+        </div>
+    
+        <div class="row d-none d-md-flex">
+            <div class="col-md-4">
+                <div class="hostel">
+                    <img src="../Images/image 9.png" alt="Hostel 1" class="hostel-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Capital Boys Hostel</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                        <p class="card-text"><i class="fas fa-star"></i> 4.2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hostel">
+                    <img src="../Images/image 10.png" alt="Hostel 2" class="hostel-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Hostel 2</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                        <p class="card-text"><i class="fas fa-star"></i> 4.5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hostel">
+                    <img src="../Images/unsplash_iMbXscxYIFE.jpg" alt="Hostel 3" class="hostel-img">
+                    <div class="card-body">
+                        <h5 class="card-title">Hostel 3</h5>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                        <p class="card-text"><i class="fas fa-star"></i> 4.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Carousel for mobile view -->
+        <div id="carouselHostels" class="carousel slide d-md-none" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hostel">
+                        <img src="../Images/image 9.png" alt="Hostel 1" class="hostel-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Capital Boys Hostel</h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                            <p class="card-text"><i class="fas fa-star"></i> 4.2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hostel">
+                        <img src="../Images/image 10.png" alt="Hostel 2" class="hostel-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Hostel 2</h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                            <p class="card-text"><i class="fas fa-star"></i> 4.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hostel">
+                        <img src="../Images/unsplash_iMbXscxYIFE.jpg" alt="Hostel 3" class="hostel-img">
+                        <div class="card-body">
+                            <h5 class="card-title">Hostel 3</h5>
+                            <p class="card-text"><i class="fas fa-map-marker-alt"></i> 456 Hostel Ave, City</p>
+                            <p class="card-text"><i class="fas fa-star"></i> 4.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselHostels" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselHostels" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- About Us -->
+
+    <div class="container-fluid my-5">
+        <div class="About-handle">
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <h1>About Us</h1>
+                <div class="about-content" id="aboutContent">
+                    <p>Welcome to <strong>Hostel Finder</strong>, your ultimate destination for finding the perfect hostel. Our mission is to make your search for the ideal hostel effortless and enjoyable. Whether you're a student looking for a comfortable place to stay near your university or a traveler seeking budget-friendly accommodation, we have you covered.</p>
+                </div>
+                <a href="contact.html" class="btn btn-dark " style="background-color: black;">Contact Us</a>
+                <!-- <button id="learnMoreBtn" class="btn btn-secondary">Learn More</button> -->
+                <div id="learnMore" class="learn-more-text">
+                    <a href="#">Learn More <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <img src="../Images/Rectangle 6.png" alt="Hostel Image" class="img-fluid">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+
+
+    <div class="container-fluid text-center choose-us">
+        <div class="container-fluid choose-handle">
+        <h2>Why Choose Us</h2>
+        <p class="page">The main reason is because our competitors have <br> disgusting sites, but we can't write that here, <br>so the text here will be different.</p>
+      
+        <div class="row mt-4">
+          <div class="col-md-3 feature">
+            <i class="fas fa-credit-card feature-icon"></i>
+            <h4>Payment methods</h4>
+            <p>Secure and fast payment options to make your transactions smooth.</p>
+          </div>
+          <div class="col-md-3 feature">
+            <i class="fas fa-search feature-icon"></i>
+            <h4>Simple search process</h4>
+            <p>Easy-to-use search tools to help you find what you need quickly.</p>
+          </div>
+          <div class="col-md-3 feature">
+            <i class="fas fa-headset feature-icon"></i>
+            <h4>24/7 Support</h4>
+            <p>Our support team is available around the clock to assist you.</p>
+          </div>
+          <div class="col-md-3 feature">
+            <i class="fas fa-smile feature-icon"></i>
+            <h4>We are nice</h4>
+            <p>Friendly and approachable staff to make your experience enjoyable.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+  <!-- What Our Customer Says -->
+
+  
+  <div class="container-fluid my-5 feedback">
+    <div class="adjust-feedback">
+      <div class="feedback-header">
+        <h2 class="text-center mb-4">What Our Customers Say</h2>
+        <h6 class="view-all">View All</h6>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card p-3 mb-3 position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="../Images/Avatar2.png" alt="Customer 1" class="customer-photo mr-3">
+                <div>
+                  <h5 class="mb-0">John Doe</h5>
+                  <small class="feedback-date">March 5, 2024</small>
+                </div>
+              </div>
+              <div class="rating-stars">⭐ 4.0</div>
+            </div>
+            <p class="mt-3">This product is amazing! It exceeded my expectations in every way.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="card p-3 mb-3 position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="../Images/Avatar2.png" alt="Customer 2" class="customer-photo mr-3">
+                <div>
+                  <h5 class="mb-0">Jane Smith</h5>
+                  <small class="feedback-date">April 12, 2024</small>
+                </div>
+              </div>
+              <div class="rating-stars">⭐ 5.0</div>
+            </div>
+            <p class="mt-3">Great quality and fast shipping. Will definitely purchase again!</p>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="card p-3 mb-3 position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="../Images/Avatar2.png" alt="Customer 3" class="customer-photo mr-3">
+                <div>
+                  <h5 class="mb-0">Mike Son</h5>
+                  <small class="feedback-date">May 1, 2024</small>
+                </div>
+              </div>
+              <div class="rating-stars">⭐ 4.5</div>
+            </div>
+            <p class="mt-3">Excellent service and product. Very satisfied with my purchase.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div class="card p-3 mb-3 position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="../Images/Avatar2.png" alt="Customer 4" class="customer-photo mr-3">
+                <div>
+                  <h5 class="mb-0">Anna Lee</h5>
+                  <small class="feedback-date">May 15, 2024</small>
+                </div>
+              </div>
+              <div class="rating-stars">⭐ 4.5</div>
+            </div>
+            <p class="mt-3">Excellent service and product. Very satisfied with my purchase.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  
+  <footer class="container-fluid footer py-4">
+    <div class="container-fluid footer-handle mt-5">
+        <div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h3>Hostel Finder</h3>
+                    <p>Your go-to platform for finding the perfect hostel.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:info@hostelfinder.com">info@hostelfinder.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+92 234 567 890</a></p>
+                    <p>Address: 123 Hostel Finder St, Suite 100, Hostel City, HC 12345</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4 follow-us">
+                    <h4>Follow Us</h4>
+                    <p>
+                        <a href="https://www.facebook.com/hostelfinder" class="text-white me-2">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.twitter.com/hostelfinder" class="text-white me-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hostelfinder" class="text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2024 Hostel Finder. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Footer End -->
+    <script>
+        document.getElementById('learnMoreBtn').addEventListener('click', function() {
+            document.getElementById('aboutContent').classList.toggle('show-more');
+            if (this.textContent === "Learn More") {
+                this.textContent = "Show Less";
+            } else {
+                this.textContent = "Learn More";
+            }
+        });
+    </script>
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
